@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', 'Inter', 'Roboto', Arial, sans-serif;
+  color: #222;
+  min-height: 100vh;
+  position: relative;
+}
+
+#global-bg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(120deg, #1A237E 0%, #00C853 50%, #FF9933 100%);
+  background-size: 200% 200%;
+  animation: global-gradient-move 24s ease-in-out infinite;
+  filter: blur(0px) brightness(0.98);
+}
+
+@keyframes global-gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.68);
+  box-shadow: 0 16px 64px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(36px) saturate(1.2);
+  -webkit-backdrop-filter: blur(36px) saturate(1.2);
+  border-radius: 1.5rem;
+  border: 1.5px solid rgba(255,255,255,0.22);
+  position: relative;
+  overflow: hidden;
+}
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 32px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.38) 0%, rgba(255,255,255,0.08) 100%);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  pointer-events: none;
+  z-index: 2;
+}
+.glass-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 0 1.5px rgba(255,255,255,0.18) inset;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.glass-heading {
+  text-shadow: 0 2px 16px #fff, 0 1px 0 #fff, 0 8px 32px rgba(26,35,126,0.12);
+  filter: blur(0.2px) brightness(1.08);
+}
+
+.animated-gradient-3d {
+  font-family: 'Poppins', 'Inter', 'Roboto', Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  background: linear-gradient(90deg, #1A237E 0%, #00C853 50%, #FF9933 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 2px 16px #fff, 0 1px 0 #fff, 0 8px 32px rgba(26,35,126,0.12);
+}
+
+.section-bg {
+  background: #fff;
+}
+.alt-section-bg {
+  background: #fff;
+}
+
+.gradient-text {
+  color: #FF9933;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}

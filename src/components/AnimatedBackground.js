@@ -13,7 +13,7 @@ export default function AnimatedBackground() {
       pointerEvents: "none",
       overflow: "hidden"
     }}>
-      {/* Glassmorphism overlay for clarity */}
+      {/* Reduced blur overlay for better content visibility */}
       <div
         style={{
           position: "absolute",
@@ -21,8 +21,8 @@ export default function AnimatedBackground() {
           left: 0,
           width: "100vw",
           height: "100vh",
-          background: "rgba(255,255,255,0.45)",
-          backdropFilter: "blur(8px)",
+          background: "rgba(255,255,255,0.85)",
+          backdropFilter: "blur(2px)",
           zIndex: 1,
         }}
       />

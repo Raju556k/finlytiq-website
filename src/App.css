@@ -89,3 +89,416 @@ body {
   font-weight: 900;
   letter-spacing: 0.05em;
 }
+
+/* DEBUG: Remove all blur and overlays for blog pages */
+.blog-page *,
+.blog-list * {
+  filter: none !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
+}
+
+/* Remove global blur for blog routes */
+body.blog-route {
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Force remove any modal overlays */
+.modal-overlay,
+.fixed.inset-0 {
+  display: none !important;
+}
+
+/* AGGRESSIVE FIX: Remove all blur and overlays when on blog pages */
+.blog-page,
+.blog-list {
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.blog-page *,
+.blog-list * {
+  filter: none !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Hide any fixed overlays on blog pages */
+.blog-page .fixed,
+.blog-list .fixed {
+  display: none !important;
+}
+
+/* Ensure text is clear and readable */
+.blog-page h1,
+.blog-page h2,
+.blog-page h3,
+.blog-page p,
+.blog-page li,
+.blog-list h1,
+.blog-list h2,
+.blog-list h3,
+.blog-list p,
+.blog-list li {
+  filter: none !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
+  color: inherit !important;
+  text-shadow: none !important;
+}
+
+/* ULTRA AGGRESSIVE FIX: Remove ALL blur and overlays for blog pages */
+.blog-page,
+.blog-list,
+.blog-page *,
+.blog-list * {
+  filter: none !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+  display: block !important;
+  position: static !important;
+  z-index: auto !important;
+}
+
+/* Force remove any fixed overlays */
+.fixed.inset-0,
+.fixed.top-0,
+.fixed.bottom-0,
+.fixed.left-0,
+.fixed.right-0 {
+  display: none !important;
+}
+
+/* Remove any modal overlays */
+.modal,
+.modal-overlay,
+[class*="modal"],
+[class*="overlay"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Force all text to be visible and clear */
+.blog-page h1,
+.blog-page h2,
+.blog-page h3,
+.blog-page h4,
+.blog-page h5,
+.blog-page h6,
+.blog-page p,
+.blog-page span,
+.blog-page div,
+.blog-page li,
+.blog-list h1,
+.blog-list h2,
+.blog-list h3,
+.blog-list h4,
+.blog-list h5,
+.blog-list h6,
+.blog-list p,
+.blog-list span,
+.blog-list div,
+.blog-list li {
+  filter: none !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
+  color: inherit !important;
+  text-shadow: none !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Remove any global blur from body when on blog routes */
+body.blog-route,
+body[data-route*="blog"] {
+  filter: none !important;
+  backdrop-filter: none !important;
+  overflow: visible !important;
+}
+
+/* Force remove any CSS that might be causing blur */
+* {
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Special override for blog pages */
+.blog-page *,
+.blog-list * {
+  filter: none !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+  display: block !important;
+  position: static !important;
+  z-index: auto !important;
+  overflow: visible !important;
+}
+
+/* Disable AnimatedBackground blur on blog pages */
+.blog-page ~ div[style*="backdrop-filter"],
+.blog-list ~ div[style*="backdrop-filter"],
+.blog-page div[style*="backdrop-filter"],
+.blog-list div[style*="backdrop-filter"] {
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+/* Disable any fixed background elements on blog pages */
+.blog-page div[style*="position: fixed"],
+.blog-list div[style*="position: fixed"] {
+  display: none !important;
+}
+
+/* Force remove any blur from the global background */
+#global-bg {
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+/* When on blog routes, disable all background effects */
+body.blog-route #global-bg,
+body.blog-route div[style*="backdrop-filter"],
+body.blog-route div[style*="filter"] {
+  backdrop-filter: none !important;
+  filter: none !important;
+  display: none !important;
+}
+
+/* Remove blur from About section */
+#about,
+#about *,
+#about ~ div[style*="backdrop-filter"],
+#about div[style*="backdrop-filter"] {
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+/* Force remove any blur from About section elements */
+#about .bg-white,
+#about .rounded-2xl,
+#about .shadow-lg {
+  backdrop-filter: none !important;
+  filter: none !important;
+  background: rgba(255, 255, 255, 1) !important;
+}
+
+/* Ensure About section text is clear */
+#about h1,
+#about h2,
+#about h3,
+#about h4,
+#about p,
+#about span,
+#about div {
+  filter: none !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
+  color: inherit !important;
+  text-shadow: none !important;
+}
+
+/* Remove any fixed overlays that might affect About section */
+#about ~ div[style*="position: fixed"] {
+  display: none !important;
+}
+
+/* ULTRA AGGRESSIVE: Remove ALL blur from entire application */
+* {
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Remove any background blur effects */
+div[style*="backdrop-filter"],
+div[style*="filter"],
+div[style*="-webkit-backdrop-filter"] {
+  backdrop-filter: none !important;
+  filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Force remove any glassmorphism effects */
+.glass,
+.glassmorphism,
+[class*="glass"],
+[class*="blur"] {
+  backdrop-filter: none !important;
+  filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background: rgba(255, 255, 255, 1) !important;
+}
+
+/* Remove any fixed background elements */
+div[style*="position: fixed"][style*="backdrop-filter"],
+div[style*="position: fixed"][style*="filter"] {
+  display: none !important;
+}
+
+/* Ensure all text is clear */
+h1, h2, h3, h4, h5, h6, p, span, div, li, a {
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+  color: inherit !important;
+  text-shadow: none !important;
+}
+
+/* Remove any global background blur */
+#global-bg,
+body,
+html {
+  backdrop-filter: none !important;
+  filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Force all sections to be clear */
+section,
+.section,
+[id*="section"] {
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Remove any overlay effects */
+.overlay,
+[class*="overlay"],
+[style*="backdrop-filter"] {
+  display: none !important;
+}
+
+/* Allow animated background but ensure content is clear */
+#global-bg {
+  backdrop-filter: none !important;
+  filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Ensure all content sections are clear and readable */
+section,
+.section,
+[id*="section"],
+#about,
+#services,
+#contact,
+#hero,
+#testimonials,
+#blog-section {
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Ensure all text content is clear */
+h1, h2, h3, h4, h5, h6, p, span, div, li, a {
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+  color: inherit !important;
+  text-shadow: none !important;
+  position: relative !important;
+  z-index: 15 !important;
+}
+
+/* Force remove any blur from content cards and containers */
+.bg-white,
+.rounded-2xl,
+.shadow-lg,
+[class*="card"],
+[class*="container"] {
+  backdrop-filter: none !important;
+  filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background: rgba(255, 255, 255, 1) !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Remove any problematic overlays */
+.overlay,
+[class*="overlay"] {
+  display: none !important;
+}
+
+/* Blog pages should have no background effects */
+.blog-page,
+.blog-list,
+.blog-page *,
+.blog-list * {
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+  background: rgba(255, 255, 255, 1) !important;
+}
+
+/* Remove any fixed overlays on blog pages */
+.blog-page ~ div[style*="position: fixed"],
+.blog-list ~ div[style*="position: fixed"] {
+  display: none !important;
+}
+
+/* Clean background replacement */
+#global-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  z-index: -1;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Ensure absolutely no blur anywhere */
+* {
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Force all content to be crystal clear */
+body,
+html,
+section,
+div,
+h1, h2, h3, h4, h5, h6, p, span, li, a {
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+  color: inherit !important;
+  text-shadow: none !important;
+}
+
+/* Remove any problematic elements */
+div[style*="backdrop-filter"],
+div[style*="filter"],
+div[style*="-webkit-backdrop-filter"] {
+  display: none !important;
+}
+
+/* Ensure all sections have solid backgrounds */
+section,
+.section,
+[id*="section"] {
+  background: rgba(255, 255, 255, 1) !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}

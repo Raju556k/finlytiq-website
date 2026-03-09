@@ -1,3 +1,6 @@
-# https://www.robotstxt.org/robotstxt.html
+# Allow all crawlers (Google, Bing, etc.)
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap (replace https://www.finlytiq.com with your live domain before going live)
+Sitemap: https://www.finlytiq.com/sitemap.xml

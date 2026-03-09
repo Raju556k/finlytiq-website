@@ -1,15 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => (
   <footer style={{ background: '#FFF7ED', position: 'relative', zIndex: 2 }} className="text-gray-700 border-t border-[#F0F0F0] mt-12">
     <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row justify-between items-center gap-6 shadow-lg rounded-2xl"
       style={{ background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(4px)' }}>
       <div className="text-lg font-bold text-[#FF9933]">Finlytiq</div>
-      <nav className="flex flex-wrap gap-6 text-base font-medium">
-        <a href="#" className="hover:text-[#FF9933] transition">Home</a>
-        <a href="#about" className="hover:text-[#FF9933] transition">About</a>
-        <a href="#services" className="hover:text-[#FF9933] transition">Services</a>
-        <a href="#contact" className="hover:text-[#FF9933] transition">Contact</a>
+      <nav className="flex flex-wrap gap-6 text-base font-medium items-center">
+        <Link to="/" className="hover:text-[#FF9933] transition">Home</Link>
+        <a href="/#about" className="hover:text-[#FF9933] transition">About</a>
+        <Link to="/services" className="hover:text-[#FF9933] transition">Services</Link>
+        <a href="/#contact" className="hover:text-[#FF9933] transition">Contact</a>
+        <a href="https://www.linkedin.com/company/finlytiq" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF9933] transition inline-flex items-center gap-1" aria-label="Finlytiq on LinkedIn">
+          LinkedIn
+        </a>
       </nav>
       <div className="text-sm text-gray-600 text-center md:text-right">
         <div>Email: <a href="mailto:team.finlytiq@gmail.com" className="text-[#FF9933] hover:underline">team.finlytiq@gmail.com</a></div>

@@ -11,6 +11,9 @@ import AnnouncementsTicker from './components/AnnouncementsTicker';
 import BlogSection from './components/BlogSection';
 import BlogList from './components/BlogList';
 import BlogPage from './components/BlogPage';
+import Calendar from './components/Calendar';
+import ServicesIndex from './components/ServicesIndex';
+import ServicePage from './components/ServicePage';
 
 function App() {
   return (
@@ -37,6 +40,18 @@ function App() {
         
         {/* Individual Blog Page */}
         <Route path="/blog/:id" element={<BlogPage />} />
+
+        {/* Calendar Page */}
+        <Route path="/calendar" element={<>
+          <Navbar />
+          <AnnouncementsTicker />
+          <Calendar />
+          <Footer />
+        </>} />
+
+        {/* Services index – all services with links to landing pages (for Google Ads / SEO) */}
+        <Route path="/services" element={<ServicesIndex />} />
+        <Route path="/services/:slug" element={<ServicePage />} />
       </Routes>
     </Router>
   );

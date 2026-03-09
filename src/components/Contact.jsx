@@ -1,142 +1,110 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
 
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
+
+    const formData = {
+      name,
+      email,
+      phone,
+      message,
+    };
 
     try {
-      // EmailJS configuration
-      const templateParams = {
-        to_email: 'team.finlytiq@gmail.com',
-        from_name: formData.name,
-        from_email: formData.email,
-        from_phone: formData.phone,
-        message: formData.message,
-        reply_to: formData.email
-      };
+      const response = await fetch("https://formspree.io/f/xyzpnwwz", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-      // Send email using EmailJS
-      const result = await emailjs.send(
-        'YOUR_SERVICE_ID', // You'll need to replace this with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // You'll need to replace this with your EmailJS template ID
-        templateParams,
-        'YOUR_USER_ID' // You'll need to replace this with your EmailJS user ID
-      );
+      if (response.ok) {
+        setStatus("SUCCESS");
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
 
-      if (result.status === 200) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', phone: '', message: '' });
+        if (window.gtag) {
+          window.gtag("event", "conversion", {
+            send_to: "AW-17432610093/XXXXXXXXXXXXXXX",
+          });
+        }
+
+        setTimeout(() => navigate("/thank-you"), 1500);
       } else {
-        setSubmitStatus('error');
+        setStatus("ERROR");
       }
     } catch (error) {
-      console.error('Email send error:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
+      console.error("Submission failed:", error);
+      setStatus("ERROR");
     }
   };
 
   return (
-    <section id="contact" className="py-16" style={{ background: '#FFF7ED' }}>
-      <div className="max-w-xl mx-auto px-4">
-        <div className="glass-card py-10 px-4 shadow-2xl rounded-2xl" style={{ background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(4px)' }}>
-          <h3 className="text-3xl font-bold text-center mb-6">Get in Touch</h3>
-          
-          {/* Success/Error Messages */}
-          {submitStatus === 'success' && (
-            <div className="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-              Thank you! Your message has been sent successfully. We'll get back to you soon.
-            </div>
-          )}
-          
-          {submitStatus === 'error' && (
-            <div className="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-              Sorry, there was an error sending your message. Please try again or contact us directly.
-            </div>
-          )}
+    <section id="contact" className="py-16 px-4 bg-white">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-3xl font-bold mb-6 text-center">Get in Touch</h2>
 
-          <form onSubmit={handleSubmit} className="space-y-4 bg-white p-8 rounded-2xl shadow-md border border-[#F0F0F0]">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleInputChange}
-              required
-              className="w-full p-3 border border-[#F0F0F0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF9933]"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleInputChange}
-              required
-              className="w-full p-3 border border-[#F0F0F0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF9933]"
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Your Phone Number"
-              value={formData.phone}
-              onChange={handleInputChange}
-              required
-              className="w-full p-3 border border-[#F0F0F0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF9933]"
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleInputChange}
-              required
-              className="w-full p-3 border border-[#F0F0F0] rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-[#FF9933]"
-            ></textarea>
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-[#FF9933] text-white py-3 rounded-lg font-semibold shadow hover:bg-[#e67c00] transition disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
-            </button>
-          </form>
-
-          <div className="mt-10 text-center">
-            <h4 className="text-lg font-semibold mb-2">Subscribe to our Newsletter</h4>
-            <form className="flex flex-col sm:flex-row gap-2 justify-center items-center">
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="p-3 border border-[#F0F0F0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF9933] w-full sm:w-auto"
-              />
-              <button
-                type="submit"
-                className="bg-[#FF9933] text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-[#e67c00] transition"
-              >
-                Subscribe
-              </button>
-            </form>
+        {status === "SUCCESS" && (
+          <div className="bg-green-100 text-green-700 p-3 mb-4 rounded">
+            Message sent successfully! Redirecting...
           </div>
-        </div>
+        )}
+        {status === "ERROR" && (
+          <div className="bg-red-100 text-red-700 p-3 mb-4 rounded">
+            Sorry, there was an error sending your message. Please try again or contact us directly.
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="text"
+            placeholder="Your Name"
+            value={name}
+            required
+            onChange={(e) => setName(e.target.value)}
+            className="w-full border border-gray-300 p-2 rounded"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            value={email}
+            required
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full border border-gray-300 p-2 rounded"
+          />
+          <input
+            type="tel"
+            placeholder="Your Phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="w-full border border-gray-300 p-2 rounded"
+          />
+          <textarea
+            placeholder="Your Message"
+            value={message}
+            required
+            onChange={(e) => setMessage(e.target.value)}
+            className="w-full border border-gray-300 p-2 rounded h-32"
+          ></textarea>
+          <button
+            type="submit"
+            className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition"
+          >
+            Send Message
+          </button>
+        </form>
       </div>
     </section>
   );

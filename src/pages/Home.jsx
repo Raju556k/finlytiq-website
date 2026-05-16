@@ -492,7 +492,7 @@ const Home = () => (
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Finlytiq LLP – Home",
-        "url": "https://www.finlytiq.com/"
+        "url": "https://finlytiqllp.com/"
       }}
     />
     <Hero />

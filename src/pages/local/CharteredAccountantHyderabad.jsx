@@ -6,10 +6,10 @@ import { services } from '../../data/services';
 const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.finlytiq.com/chartered-accountant-hyderabad",
+  "@id": "https://finlytiqllp.com/chartered-accountant-hyderabad",
   "name": "Finlytiq LLP – Chartered Accountants &amp; Financial Advisory, Hyderabad",
   "description": "Multi-disciplinary financial advisory firm in Hyderabad offering GST, Income Tax, Company Registration, Virtual CFO, and Startup Advisory services.",
-  "url": "https://www.finlytiq.com/chartered-accountant-hyderabad",
+  "url": "https://finlytiqllp.com/chartered-accountant-hyderabad",
   "telephone": ["+91-9603799411", "+91-9701557017"],
   "email": "team.finlytiq@gmail.com",
   "address": { "@type": "PostalAddress", "addressLocality": "Hyderabad", "addressRegion": "Telangana", "addressCountry": "IN" },

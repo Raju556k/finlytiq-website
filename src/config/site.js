@@ -1,8 +1,8 @@
 /**
  * Site config for SEO, JSON-LD, sitemap, and Google Ads.
- * Set REACT_APP_SITE_URL in .env for production (e.g. https://www.finlytiq.com).
+ * Set REACT_APP_SITE_URL in .env for production (e.g. https://finlytiqllp.com).
  */
-export const SITE_URL = process.env.REACT_APP_SITE_URL || (typeof window !== 'undefined' ? window.location.origin : 'https://www.finlytiq.com');
+export const SITE_URL = process.env.REACT_APP_SITE_URL || (typeof window !== 'undefined' ? window.location.origin : 'https://finlytiqllp.com');
 
 export const BUSINESS = {
   name: 'Finlytiq LLP',

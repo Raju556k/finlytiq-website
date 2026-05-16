@@ -21,10 +21,10 @@ const ServiceDetail = () => {
     "provider": {
       "@type": "AccountingService",
       "name": "Finlytiq LLP",
-      "url": "https://www.finlytiq.com"
+      "url": "https://finlytiqllp.com"
     },
     "areaServed": { "@type": "State", "name": "Telangana" },
-    "url": `https://www.finlytiq.com/services/${svc.slug}`
+    "url": `https://finlytiqllp.com/services/${svc.slug}`
   };
 
   return (

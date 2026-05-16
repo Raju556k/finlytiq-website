@@ -7,7 +7,7 @@ const schema = {
   "@type": "LocalBusiness",
   "name": "Finlytiq LLP – Company Registration Telangana",
   "description": "Private Limited Company and LLP registration in Telangana and Hyderabad by experienced CAs and Company Secretaries.",
-  "url": "https://www.finlytiq.com/company-registration-telangana",
+  "url": "https://finlytiqllp.com/company-registration-telangana",
   "telephone": "+91-9603799411",
   "address": { "@type": "PostalAddress", "addressLocality": "Hyderabad", "addressRegion": "Telangana", "addressCountry": "IN" }
 };

@@ -7,7 +7,7 @@ const schema = {
   "@type": "LocalBusiness",
   "name": "Finlytiq LLP – GST Consultant Hyderabad",
   "description": "Expert GST registration and return filing services in Hyderabad. GSTR-1, GSTR-3B, GSTR-9, GST audit and compliance by qualified CAs.",
-  "url": "https://www.finlytiq.com/gst-consultant-hyderabad",
+  "url": "https://finlytiqllp.com/gst-consultant-hyderabad",
   "telephone": "+91-9603799411",
   "address": { "@type": "PostalAddress", "addressLocality": "Hyderabad", "addressRegion": "Telangana", "addressCountry": "IN" },
   "openingHours": "Mo-Sa 09:00-19:00"

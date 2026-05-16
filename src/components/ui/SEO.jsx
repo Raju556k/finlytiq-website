@@ -17,14 +17,14 @@ const SEO = ({
       <title>{fullTitle}</title>
       {description && <meta name="description" content={description} />}
       {keywords && <meta name="keywords" content={keywords} />}
-      {canonical && <link rel="canonical" href={`https://www.finlytiq.com${canonical}`} />}
+      {canonical && <link rel="canonical" href={`https://finlytiqllp.com${canonical}`} />}
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
       {/* OG */}
       <meta property="og:title" content={fullTitle} />
       {description && <meta property="og:description" content={description} />}
-      <meta property="og:image" content={`https://www.finlytiq.com${ogImage}`} />
-      {canonical && <meta property="og:url" content={`https://www.finlytiq.com${canonical}`} />}
+      <meta property="og:image" content={`https://finlytiqllp.com${ogImage}`} />
+      {canonical && <meta property="og:url" content={`https://finlytiqllp.com${canonical}`} />}
 
       {/* Twitter */}
       <meta name="twitter:title" content={fullTitle} />

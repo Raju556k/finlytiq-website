@@ -60,12 +60,35 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const form = e.currentTarget;
+
+    // Honeypot: bots auto-fill the hidden "website" field → silently drop as spam
+    if (form.website && form.website.value) { setStatus('success'); return; }
+
     setStatus('loading');
+
+    // Lead-source tracking — know exactly where every lead comes from
+    const params = new URLSearchParams(window.location.search);
+    let ref = 'Direct / Typed URL';
+    try { if (document.referrer) ref = new URL(document.referrer).hostname; } catch { /* ignore */ }
+    const leadMeta = {
+      lead_source : params.get('utm_source') || ref,
+      utm_campaign: params.get('utm_campaign') || '—',
+      landing_page: window.location.pathname,
+      submitted_at: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+    };
+
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ access_key: WEB3FORMS_KEY, subject: 'New Contact Form Submission – Finlytiq', ...formData }),
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject  : `New Contact Enquiry – ${formData.name || 'Website'} – Finlytiq`,
+          from_name: 'Finlytiq Website – Contact Form',
+          ...formData,
+          ...leadMeta,
+        }),
       });
       const data = await res.json();
       setStatus(data.success ? 'success' : 'error');
@@ -170,6 +193,11 @@ const Contact = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <h3 className="text-lg font-black font-display text-gray-900 mb-5">Send a Message</h3>
+
+                {/* Honeypot — hidden from humans, bots fill it → submission silently dropped */}
+                <input type="text" name="website" tabIndex="-1" autoComplete="off"
+                  aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0 }} />
+
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-semibold text-gray-600 mb-1.5">Full Name *</label>
@@ -178,8 +206,9 @@ const Contact = () => {
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange/40 focus:border-brand-orange transition" />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1.5">Phone</label>
-                    <input name="phone" type="tel" value={formData.phone} onChange={handleChange}
+                    <label className="block text-xs font-semibold text-gray-600 mb-1.5">Phone *</label>
+                    <input name="phone" type="tel" required value={formData.phone} onChange={handleChange}
+                      pattern="[\d\s+\-()]{10,16}" title="Enter a valid contact number (10 digits)"
                       placeholder="+91 98765 43210"
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange/40 focus:border-brand-orange transition" />
                   </div>

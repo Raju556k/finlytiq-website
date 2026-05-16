@@ -25,6 +25,15 @@ const BookConsultation = () => {
 
     // Build payload from form fields
     const data = new FormData(formRef.current);
+
+    // Honeypot: bots auto-fill hidden "website" field → silently drop as spam
+    if (data.get('website')) { navigate('/thank-you'); return; }
+
+    // Lead-source tracking — know exactly where every booking comes from
+    const params = new URLSearchParams(window.location.search);
+    let ref = 'Direct / Typed URL';
+    try { if (document.referrer) ref = new URL(document.referrer).hostname; } catch { /* ignore */ }
+
     const payload = {
       access_key        : WEB3FORMS_KEY,
       subject           : `New Consultation Booking – ${data.get('full_name')} – Finlytiq`,
@@ -36,6 +45,9 @@ const BookConsultation = () => {
       business_type     : data.get('business_type') || 'Not specified',
       consultation_mode : data.get('consultation_mode') || 'Not specified',
       message           : data.get('message') || 'No message provided',
+      lead_source       : params.get('utm_source') || ref,
+      utm_campaign      : params.get('utm_campaign') || '—',
+      landing_page      : window.location.pathname,
       submitted_at      : new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
     };
 
@@ -152,6 +164,10 @@ const BookConsultation = () => {
                 <h2 className="text-xl font-black font-display text-gray-900 mb-1">Tell Us About Your Needs</h2>
                 <p className="text-gray-500 text-sm mb-5">All fields marked * are required</p>
 
+                {/* Honeypot — hidden from humans, bots fill it → submission silently dropped */}
+                <input type="text" name="website" tabIndex="-1" autoComplete="off"
+                  aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0 }} />
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-semibold text-gray-600 mb-1.5">Full Name *</label>
@@ -161,6 +177,7 @@ const BookConsultation = () => {
                   <div>
                     <label className="block text-xs font-semibold text-gray-600 mb-1.5">Phone / WhatsApp *</label>
                     <input name="phone" type="tel" required placeholder="+91 98765 43210"
+                      pattern="[\d\s+\-()]{10,16}" title="Enter a valid contact number (10 digits)"
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange transition" />
                   </div>
                 </div>

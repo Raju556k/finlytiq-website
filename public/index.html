@@ -1,27 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17432610093"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-17432610093');
-</script>
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Finlytiq LLP – Tax, GST, Compliance & Advisory in Hyderabad, Telangana. Income Tax, GST returns, Company incorporation, Trademark, VCFO." />
-  <meta name="keywords" content="CA Hyderabad, tax consultant Hyderabad, GST filing Telangana, company registration Hyderabad, income tax filing, Finlytiq" />
+
+  <!-- Primary SEO (overridden per-page by react-helmet-async) -->
+  <title>Finlytiq LLP | Financial &amp; Business Advisory – Hyderabad</title>
+  <meta name="description" content="Finlytiq LLP – multi-disciplinary financial and business advisory firm in Hyderabad. Expert CAs, Company Secretaries, Cost Accountants &amp; Legal Experts for GST, Income Tax, Company Registration, Virtual CFO, NRI Taxation &amp; more." />
+  <meta name="keywords" content="financial advisory hyderabad, chartered accountant hyderabad, GST registration, income tax filing, company incorporation, virtual CFO, NRI taxation, ROC compliance, business advisory, startup advisory" />
+  <meta name="author" content="Finlytiq LLP" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Finlytiq LLP – Tax, GST, Compliance in Hyderabad" />
-  <meta property="og:description" content="Tax, GST, compliance and advisory in Hyderabad, Telangana. Income Tax, GST returns, Company incorporation, Trademark, VCFO." />
-  <!-- Set og:image to your logo or brand image URL when you have a live domain -->
-  <title>Finlytiq LLP</title>
+  <meta property="og:site_name" content="Finlytiq LLP" />
+  <meta property="og:title" content="Finlytiq LLP | Financial &amp; Business Advisory – Hyderabad" />
+  <meta property="og:description" content="Intelligence behind every financial move. Expert advisory on GST, Income Tax, Company Registration, Virtual CFO, NRI Taxation &amp; more. Trusted by 500+ businesses." />
+  <meta property="og:url" content="https://www.finlytiq.com/" />
+  <meta property="og:image" content="https://www.finlytiq.com/logo512.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@finlytiq" />
+  <meta name="twitter:title" content="Finlytiq LLP | Financial &amp; Business Advisory" />
+  <meta name="twitter:description" content="Intelligence behind every financial move. Expert financial, tax &amp; compliance advisory for growing businesses." />
+  <meta name="twitter:image" content="https://www.finlytiq.com/logo512.png" />
+
+  <!-- Theme / PWA -->
+  <meta name="theme-color" content="#FF9933" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- Fonts (preconnect for speed) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- ── TRACKING: replace the 3 placeholder IDs below ──────────────────
+       GTM-XXXXXXX  → your Google Tag Manager container ID
+       G-XXXXXXXXXX → your GA4 Measurement ID (analytics.google.com)
+       AW-XXXXXXXXXX→ your Google Ads conversion ID
+       ────────────────────────────────────────────────────────────────── -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { page_title: document.title, page_location: window.location.href });
+    gtag('config', 'AW-XXXXXXXXXX');
+  </script>
+
+  <!-- Global Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Finlytiq LLP",
+    "description": "Multi-disciplinary financial and business advisory firm in Hyderabad — Chartered Accountants, Company Secretaries, Cost Accountants, and Legal Experts.",
+    "url": "https://www.finlytiq.com",
+    "logo": "https://www.finlytiq.com/logo192.png",
+    "telephone": ["+91-9603799411", "+91-9701557017"],
+    "email": "team.finlytiq@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "addressCountry": "IN"
+    },
+    "openingHours": "Mo-Sa 09:00-19:00",
+    "priceRange": "₹₹",
+    "areaServed": { "@type": "State", "name": "Telangana" }
+  }
+  </script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <div id="root"></div>
 </body>
 </html>

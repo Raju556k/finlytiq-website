@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import AnimatedBackground from './components/AnimatedBackground';
 
 const CURSOR_COLOR = '#FF9933'; // Saffron
 const CURSOR_BG = 'rgba(255,255,255,0.8)'; // White with opacity
@@ -74,7 +73,6 @@ const AnimatedCursor = () => {
 
   return (
     <>
-      <AnimatedBackground />
       <div
         ref={trailingRef}
         style={{

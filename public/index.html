@@ -40,24 +40,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
 
-  <!-- ── TRACKING: replace the 3 placeholder IDs below ──────────────────
-       GTM-XXXXXXX  → your Google Tag Manager container ID
-       G-XXXXXXXXXX → your GA4 Measurement ID (analytics.google.com)
-       AW-XXXXXXXXXX→ your Google Ads conversion ID
+  <!-- ── TRACKING ──────────────────────────────────────────────────────
+       GA4 ACTIVE  → G-R6PB5QQS4X
+       GTM + Google Ads (AW-) are disabled until real IDs exist.
+       To enable later: uncomment the GTM block below + the AW config line,
+       and replace GTM-XXXXXXX / AW-XXXXXXXXXX with real IDs.
        ────────────────────────────────────────────────────────────────── -->
+  <!-- GTM disabled (no container yet)
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  -->
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R6PB5QQS4X"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX', { page_title: document.title, page_location: window.location.href });
-    gtag('config', 'AW-XXXXXXXXXX');
+    gtag('config', 'G-R6PB5QQS4X', { page_title: document.title, page_location: window.location.href });
+    /* Google Ads disabled until AW- ID added: gtag('config', 'AW-XXXXXXXXXX'); */
   </script>
 
   <!-- Global Organization Schema -->
@@ -84,10 +87,10 @@
   </script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) - disabled until real GTM container exists
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  -->
   <div id="root"></div>
 </body>
 </html>

@@ -112,11 +112,11 @@ const TrustBar = () => (
     <div className="max-w-6xl mx-auto px-6">
       <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-sm text-gray-500 font-medium">
         {[
-          { icon: '✅', text: 'ICAI Registered' },
-          { icon: '✅', text: 'MCA Approved' },
-          { icon: '✅', text: 'GST Council Listed' },
-          { icon: '✅', text: 'DPIIT Startup India Partner' },
-          { icon: '✅', text: 'CA · CS · CMA · Legal Experts' },
+          { icon: '✅', text: 'Multi-Disciplinary Experts' },
+          { icon: '✅', text: 'Confidential & Secure' },
+          { icon: '✅', text: 'Transparent Pricing' },
+          { icon: '✅', text: '500+ Businesses Served' },
+          { icon: '✅', text: 'CA · CS · CMA · Legal Network' },
           { icon: '✅', text: '100% Digital Process' },
         ].map(({ icon, text }) => (
           <div key={text} className="flex items-center gap-1.5">

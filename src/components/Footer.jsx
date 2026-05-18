@@ -110,7 +110,7 @@ const Footer = () => (
     {/* Bottom bar */}
     <div className="border-t border-white/[0.06]">
       <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-600">
-        <span>&copy; {new Date().getFullYear()} Finlytiq LLP. All rights reserved. ICAI Registered.</span>
+        <span>&copy; {new Date().getFullYear()} Finlytiq LLP. All rights reserved. Multi-Disciplinary Financial &amp; Advisory Firm.</span>
         <div className="flex gap-5">
           <Link to="/privacy-policy" className="hover:text-gray-400 transition-colors">Privacy Policy</Link>
           <Link to="/terms" className="hover:text-gray-400 transition-colors">Terms of Service</Link>

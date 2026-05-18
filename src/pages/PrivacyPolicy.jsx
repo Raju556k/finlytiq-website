@@ -53,14 +53,14 @@ const PrivacyPolicy = () => (
       <Section title="3. Information Sharing">
         <p>We do not sell, trade, or rent your personal information to third parties. We may share your information with:</p>
         <ul className="list-disc pl-5 space-y-1">
-          <li><strong>Regulatory authorities:</strong> As required by law (MCA, Income Tax Department, GST Network, ICAI, etc.)</li>
+          <li><strong>Regulatory authorities:</strong> As required by law (MCA, Income Tax Department, GST Network, etc.)</li>
           <li><strong>Service providers:</strong> Trusted partners who assist in delivering our services (e.g., secure email platforms, cloud storage), bound by confidentiality obligations</li>
           <li><strong>Legal proceedings:</strong> When required by court order or legal process</li>
         </ul>
       </Section>
 
       <Section title="4. Client Confidentiality">
-        <p>As Chartered Accountants, we are bound by the ICAI Code of Ethics and strict professional confidentiality norms. All financial documents, tax returns, business information, and personal data shared with us are treated as strictly confidential and protected accordingly.</p>
+        <p>We adhere to strict professional confidentiality standards. All financial documents, tax returns, business information, and personal data shared with us are treated as strictly confidential and protected accordingly.</p>
       </Section>
 
       <Section title="5. Data Security">

@@ -110,7 +110,7 @@ const Testimonials = () => {
 
         {/* Trust badges */}
         <div className="mt-14 flex flex-wrap justify-center gap-6 text-gray-400 text-sm font-medium">
-          {['ISO Compliant', 'ICAI Registered', 'MCA Approved', 'GST Council Listed'].map(badge => (
+          {['Multi-Disciplinary Experts', 'Confidential & Secure', 'Transparent Pricing', 'Pan-India Service'].map(badge => (
             <div key={badge} className="flex items-center gap-2">
               <svg viewBox="0 0 20 20" fill="#00C853" className="w-4 h-4">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

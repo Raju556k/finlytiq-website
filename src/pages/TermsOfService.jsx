@@ -62,7 +62,7 @@ const TermsOfService = () => (
       </Section>
 
       <Section title="5. Professional Standards and Limitations">
-        <p>All services are rendered in accordance with the ICAI Code of Ethics and applicable professional standards. However:</p>
+        <p>All services are rendered in accordance with applicable professional standards and codes of conduct. However:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>Our advice is based on laws and regulations in force at the time and may need to be revisited if laws change</li>
           <li>Tax and regulatory outcomes depend on facts specific to each client and cannot be guaranteed</li>

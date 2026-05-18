@@ -64,7 +64,7 @@ const Disclaimer = () => (
       </Section>
 
       <Section title="7. Professional Standards">
-        <p>Finlytiq LLP and its partners/CAs are registered with the Institute of Chartered Accountants of India (ICAI) and are bound by its Code of Ethics. While we strive for accuracy in all our communications, the dynamic nature of Indian tax law and business regulations means that professional advice should always be sought for specific situations.</p>
+        <p>Finlytiq LLP is a multi-disciplinary advisory firm that works with a network of qualified independent professionals — including Chartered Accountants, Company Secretaries, Cost Accountants, and legal experts — each governed by their respective professional bodies and codes of conduct. While we strive for accuracy in all our communications, the dynamic nature of Indian tax law and business regulations means that professional advice should always be sought for specific situations.</p>
       </Section>
 
       <Section title="8. Limitation of Liability">

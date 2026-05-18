@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <!-- Core Pages -->
   <url><loc>https://finlytiqllp.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://finlytiqllp.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://finlytiqllp.com/services</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://finlytiqllp.com/resources</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finlytiqllp.com/resources</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://finlytiqllp.com/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://finlytiqllp.com/book-consultation</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://finlytiqllp.com/faq</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Local SEO Pages -->
+  <url><loc>https://finlytiqllp.com/chartered-accountant-hyderabad</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://finlytiqllp.com/gst-consultant-hyderabad</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://finlytiqllp.com/company-registration-telangana</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
   <!-- Service Pages -->
   <url><loc>https://finlytiqllp.com/services/gst-registration-filing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -20,13 +26,18 @@
   <url><loc>https://finlytiqllp.com/services/virtual-cfo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://finlytiqllp.com/services/business-consulting</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Local SEO Pages -->
-  <url><loc>https://finlytiqllp.com/chartered-accountant-hyderabad</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://finlytiqllp.com/gst-consultant-hyderabad</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://finlytiqllp.com/company-registration-telangana</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Resource Articles -->
+  <url><loc>https://finlytiqllp.com/resources/tax-calendar-ay-2026-27</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://finlytiqllp.com/resources/income-tax-act-2025-vs-1961</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://finlytiqllp.com/resources/tds-sections-new-vs-old-act</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://finlytiqllp.com/resources/gst-registration-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finlytiqllp.com/resources/llp-vs-private-limited</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finlytiqllp.com/resources/tax-filing-checklist-startups</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finlytiqllp.com/resources/nri-taxation-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finlytiqllp.com/resources/roc-compliance-calendar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finlytiqllp.com/resources/virtual-cfo-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finlytiqllp.com/resources/gst-input-tax-credit</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finlytiqllp.com/resources/trademark-registration-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finlytiqllp.com/resources/startup-india-dpiit-registration</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- Legal Pages -->
-  <url><loc>https://finlytiqllp.com/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://finlytiqllp.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://finlytiqllp.com/disclaimer</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

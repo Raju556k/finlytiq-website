@@ -3,19 +3,26 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/ui/SEO';
 
 const ThankYou = () => {
-  // Fire Google Ads conversion event when this page loads
+  // Fire lead-tracking event when this page loads
   useEffect(() => {
-    // GA4 conversion event
     if (window.gtag) {
-      window.gtag('event', 'conversion', {
-        send_to: 'AW-CONVERSION_ID/CONVERSION_LABEL', // ← Replace after Google Ads setup
-        event_category: 'lead',
-        event_label: 'consultation_form_submit',
-      });
+      // GA4 lead conversion (active — measured in Google Analytics)
       window.gtag('event', 'generate_lead', {
         currency: 'INR',
         value: 1000,
+        event_category: 'lead',
+        event_label: 'consultation_form_submit',
       });
+
+      /* Google Ads conversion — DISABLED until a real Ads account exists.
+         To enable: replace AW-CONVERSION_ID/CONVERSION_LABEL with the real
+         value from Google Ads, then uncomment the block below.
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-CONVERSION_ID/CONVERSION_LABEL',
+        event_category: 'lead',
+        event_label: 'consultation_form_submit',
+      });
+      */
     }
     // Scroll to top
     window.scrollTo(0, 0);
